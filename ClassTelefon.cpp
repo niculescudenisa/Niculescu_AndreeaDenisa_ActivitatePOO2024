@@ -90,7 +90,7 @@ public:
 		return nrDistribuitori;
 	}
 
-	void setNrDistribuitori(int nrDistribuitori,string* distribuitori) {
+	void setNrDistribuitori(int nrDistribuitori, string* distribuitori) {
 		if (nrDistribuitori > 0)
 		{
 			this->nrDistribuitori = nrDistribuitori;
@@ -142,7 +142,7 @@ public:
 		cout << "An aparitie:" << this->anAparitie << endl;
 		cout << "TVA:" << this->TVA << endl;
 		cout << "Nr distribuitori:" << this->nrDistribuitori << ":" << endl;
-		
+
 		for (int i = 0; i < this->nrDistribuitori; i++) {
 			if (this->distribuitori != NULL)
 			{
@@ -168,7 +168,7 @@ public:
 
 
 	string& operator[](int index) {
-		if (index >=0 && index < this->nrDistribuitori)
+		if (index >= 0 && index < this->nrDistribuitori)
 		{
 			return this->distribuitori[index];
 		}
@@ -214,7 +214,7 @@ public:
 		}
 		else {
 			t.distribuitori = NULL;
-			}
+		}
 		return input;
 	}
 
@@ -225,21 +225,21 @@ public:
 int Telefon::TVA = 19;
 
 ostream& operator<<(ostream& output, Telefon t) {
-		output << "Denumirea:" << t.denumire << endl;
-		output << "Nr. stoc:" << t.stoc << endl;
-		output << "Pretul:" << t.pret << endl;
-		output << "An aparitie:" << t.anAparitie << endl;
-		output << "TVA:" << t.TVA << endl;
-		output << "Nr distribuitori:" << t.nrDistribuitori << ":" << endl;
-		
-		for (int i = 0; i < t.nrDistribuitori; i++) {
-			if (t.distribuitori != NULL)
-			{
-				output << t.distribuitori[i] << ",";
-			}
+	output << "Denumirea:" << t.denumire << endl;
+	output << "Nr. stoc:" << t.stoc << endl;
+	output << "Pretul:" << t.pret << endl;
+	output << "An aparitie:" << t.anAparitie << endl;
+	output << "TVA:" << t.TVA << endl;
+	output << "Nr distribuitori:" << t.nrDistribuitori << ":" << endl;
+
+	for (int i = 0; i < t.nrDistribuitori; i++) {
+		if (t.distribuitori != NULL)
+		{
+			output << t.distribuitori[i] << ",";
 		}
-		return output;
-	} 
+	}
+	return output;
+}
 
 int main() {
 	Telefon t1;
@@ -286,13 +286,13 @@ int main() {
 	}
 	cout << endl;
 
-	
+
 	cin >> t5;
 	cout << endl;
 
 	t1.setDenumire("SAMSUNG GALAXY S20");
 	t1.setPret(1111);
 	t1.setStoc(10);
-	cout << t1.getDenumire() <<endl<<t1.getPret()<<endl<<t1.getStoc()<< endl;
+	cout << t1.getDenumire() << endl << t1.getPret() << endl << t1.getStoc() << endl;
 
 }
