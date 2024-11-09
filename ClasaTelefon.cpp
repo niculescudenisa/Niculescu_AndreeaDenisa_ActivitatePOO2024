@@ -90,7 +90,7 @@ public:
 		return nrDistribuitori;
 	}
 
-	void serNrDistribuitori() {
+	void setNrDistribuitori(int nrDistribuitori,string* distribuitori) {
 		if (nrDistribuitori > 0)
 		{
 			this->nrDistribuitori = nrDistribuitori;
